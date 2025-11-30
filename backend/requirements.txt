@@ -18,6 +18,10 @@ python-multipart==0.0.6
 # Environment variables (optional)
 python-dotenv==1.0.0
 
+# Email validation for Pydantic
+email-validator==2.1.0
+
+
 
 # Production Server
 gunicorn==21.2.0
