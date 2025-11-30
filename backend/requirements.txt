@@ -11,7 +11,7 @@ sqlalchemy==2.0.23
 # Authentication and Security
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-bcrypt==4.0.1  # Pin compatible bcrypt version for passlib
+bcrypt==3.2.2  # Pin compatible bcrypt version for passlib (1.7.4 doesn't support bcrypt 4.0+)
 
 
 # Form data handling (for OAuth2 password flow)
