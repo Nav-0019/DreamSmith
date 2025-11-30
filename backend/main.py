@@ -8,11 +8,14 @@ Student finance guidance app backend.
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import Base, engine
+import models # Explicitly import models to ensure they are registered with Base
 from auth.routers import router as auth_router
 
 # Create database tables on startup
 # In production, use Alembic for migrations instead
+print("Creating database tables...")
 Base.metadata.create_all(bind=engine)
+print("Database tables created.")
 
 # Create FastAPI application instance
 app = FastAPI(
