@@ -39,12 +39,23 @@ from fastapi.responses import FileResponse
 import os
 
 # Mount frontend static files
-# Assuming frontend is at ../frontend relative to this file
-frontend_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend")
+# When running with rootDirectory=backend, we need to go up one level to find frontend
+# Get the current file's directory (backend/)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Go up one level to project root, then into frontend
+frontend_path = os.path.join(os.path.dirname(current_dir), "frontend")
+
+# If frontend doesn't exist at that path, try relative path (for local development)
+if not os.path.exists(frontend_path):
+    frontend_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend")
+
+print(f"Frontend path: {frontend_path}")  # Debug log
 
 # Mount /css, /js, /assets if they exist
-app.mount("/css", StaticFiles(directory=os.path.join(frontend_path, "css")), name="css")
-app.mount("/js", StaticFiles(directory=os.path.join(frontend_path, "js")), name="js")
+if os.path.exists(os.path.join(frontend_path, "css")):
+    app.mount("/css", StaticFiles(directory=os.path.join(frontend_path, "css")), name="css")
+if os.path.exists(os.path.join(frontend_path, "js")):
+    app.mount("/js", StaticFiles(directory=os.path.join(frontend_path, "js")), name="js")
 # app.mount("/assets", StaticFiles(directory=os.path.join(frontend_path, "assets")), name="assets") # Uncomment if you have assets
 
 @app.get("/")
