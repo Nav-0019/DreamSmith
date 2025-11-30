@@ -18,3 +18,9 @@ python-multipart==0.0.6
 # Environment variables (optional)
 python-dotenv==1.0.0
 
+
+# Production Server
+gunicorn==21.2.0
+
+# PostgreSQL Adapter
+psycopg2-binary==2.9.9

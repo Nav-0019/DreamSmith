@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: money-seed
+    env: python
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && gunicorn main:app -k uvicorn.workers.UvicornWorker
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: money-seed-db
+          property: connectionString
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+databases:
+  - name: money-seed-db
+    databaseName: moneyseed
+    user: moneyseed
+    plan: free
