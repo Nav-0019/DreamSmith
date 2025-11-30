@@ -51,6 +51,11 @@ if not os.path.exists(frontend_path):
 
 print(f"Frontend path: {frontend_path}")  # Debug log
 
+@app.get("/healthz")
+async def health_check():
+    return {"status": "ok"}
+
+
 # Mount /css, /js, /assets if they exist
 if os.path.exists(os.path.join(frontend_path, "css")):
     app.mount("/css", StaticFiles(directory=os.path.join(frontend_path, "css")), name="css")
