@@ -1,111 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoneySeed - Grow Your Financial Knowledge</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <title>MoneySeed</title>
+  <link rel="stylesheet" href="css/landing.css" />
 </head>
+<body>
 
-<body class="bg-gray-50 text-gray-800">
-
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-green-600">MoneySeed</h1>
-
-            <div class="flex gap-3">
-                <a href="login.html"
-                    class="px-4 py-2 text-green-600 border border-green-600 rounded-lg hover:bg-green-50 transition">
-                    Login
-                </a>
-                <a href="signup.html"
-                    class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-                    Sign Up
-                </a>
-            </div>
-        </div>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">MoneySeed</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn-outline">Login</a>
+      <a href="signup.html" class="btn-primary">Sign Up</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="text-center py-20 bg-gradient-to-br from-green-100 to-green-200">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-5xl font-extrabold text-green-700 mb-6 animate-fade-in">
-                Grow Your Financial Knowledge 🌱
-            </h2>
+  <!-- HERO -->
+  <main class="hero-wrapper">
+    <section class="hero">
+      <h1>Financial clarity for students</h1>
+      <p>
+        Learn how money works, build smart habits, and explore investing —
+        without pressure or confusion.
+      </p>
 
-            <p class="text-xl text-gray-700 mb-8">
-                Simple tools and smart guidance made especially for students.
-            </p>
-
-            <div class="flex gap-4 justify-center flex-wrap">
-                <a href="signup.html"
-                    class="px-8 py-3 bg-green-600 text-white text-lg rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition transform hover:-translate-y-1">
-                    Get Started
-                </a>
-                <a href="login.html"
-                    class="px-8 py-3 bg-white text-green-600 text-lg rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border-2 border-green-600">
-                    Explore Now
-                </a>
-            </div>
-        </div>
+      <div class="hero-actions">
+        <a href="about.html" class="btn-outline">Learn More</a>
+        <a href="signup.html" class="btn-primary">Get Started</a>
+      </div>
     </section>
+  </main>
 
-    <!-- Features Section -->
-    <section class="max-w-6xl mx-auto px-6 py-16">
-        <h3 class="text-4xl font-semibold text-center text-green-700 mb-12">
-            Features
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            <div
-                class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition transform hover:-translate-y-2">
-                <div class="text-5xl mb-4">📚</div>
-                <h4 class="text-2xl font-semibold mb-3 text-green-600">Track Expenses</h4>
-                <p class="text-gray-600">Understand your spending and build better habits.</p>
-            </div>
-
-            <div
-                class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition transform hover:-translate-y-2">
-                <div class="text-5xl mb-4">🤖</div>
-                <h4 class="text-2xl font-semibold mb-3 text-green-600">AI Guidance</h4>
-                <p class="text-gray-600">Receive personalized money tips based on your lifestyle.</p>
-            </div>
-
-            <div
-                class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition transform hover:-translate-y-2">
-                <div class="text-5xl mb-4">💡</div>
-                <h4 class="text-2xl font-semibold mb-3 text-green-600">Financial Learning</h4>
-                <p class="text-gray-600">Short, simple lessons designed for beginners.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="bg-green-600 text-white py-16 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-3xl font-bold mb-4">Ready to Take Control of Your Finances?</h3>
-            <p class="text-lg mb-8 opacity-90">Join thousands of students already growing their financial knowledge.</p>
-            <a href="signup.html"
-                class="px-10 py-4 bg-white text-green-600 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-                Start Your Journey
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-200 text-center py-6">
-        <p>© 2025 MoneySeed. All Rights Reserved.</p>
-    </footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2026 MoneySeed. All rights reserved.
+  </footer>
 
 </body>
-
 </html>
